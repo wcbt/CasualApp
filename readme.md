@@ -3,11 +3,7 @@
 
 ---
 
-content = """# CasualApp
-
 ## Overview / 項目概述
-
-### English
 
 CasualApp is a job coordination and broadcasting platform designed to replace inefficient, fragmented messaging groups used for managing casual hotel and catering work.
 
@@ -24,8 +20,6 @@ CasualApp centralizes this workflow into a single platform that enables:
 The initial development focuses on **Android**, **Java-based backend**, and **relational databases**, with future expansion planned for web and iOS platforms.
 
 ---
-
-### 中文（繁體）
 
 CasualApp 是一個用於管理酒店及餐飲散工工作的協調與廣播平台，旨在取代目前效率低下、分散於多個通訊群組的工作安排方式。
 
@@ -79,15 +73,11 @@ CasualApp 將所有流程集中至單一平台，提供：
 
 ## Typical Workflow / 基本流程
 
-### English
-
 1. Coordinator or hotel posts a job
 2. Workers view jobs in a unified feed
 3. Worker taps “Join” to reserve a slot
 4. Capacity updates in real time
 5. Attendance and outcomes recorded after the job
-
-### 中文（繁體）
 
 1. 協調員或酒店發布工作
 2. 工人於統一平台查看工作列表
