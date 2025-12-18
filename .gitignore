@@ -1,0 +1,128 @@
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# IntelliJ / Android Studio
+############################
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+############################
+# Gradle / Android
+############################
+.gradle/
+**/build/
+**/.cxx/
+local.properties
+captures/
+.externalNativeBuild/
+
+############################
+# Android generated
+############################
+*.apk
+*.aab
+*.dex
+*.class
+bin/
+
+############################
+# Kotlin
+############################
+*.kotlin_module
+
+############################
+# Java
+############################
+*.log
+hs_err_pid*
+
+############################
+# Spring Boot / Backend
+############################
+backend/**/target/
+backend/**/.classpath
+backend/**/.project
+backend/**/.settings/
+
+############################
+# Node / Web
+############################
+**/node_modules/
+**/dist/
+**/.next/
+**/.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+############################
+# Python (if ever used)
+############################
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+############################
+# Xcode / iOS
+############################
+**/DerivedData/
+**/*.xcuserdata/
+**/*.xcworkspace/
+**/*.pbxuser
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+**/*.swp
+**/*.xccheckout
+**/*.moved-aside
+**/*.ipa
+
+
+# Fastlane (iOS/Android CI)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Docker
+*.pid
+*.log
+.env.local
+.env.production
+.env.development
+
+# Design tooling
+# (ALLOW images, block heavy sources)
+*.psd
+*.ai
+*.fig
+*.sketch
+*.xcf
+
+# Secrets (never commit)
+.env
+.env.*
+secrets/
+*.keystore
+*.jks
+*.pem
+*.p12
+*.key
+
+# Git
+*.orig
+*.rej
