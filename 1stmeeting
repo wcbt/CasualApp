@@ -1,0 +1,265 @@
+# CasualApp – Functional Specification v1.0  
+CasualApp 功能規格說明 v1.0
+
+---
+
+## 1. Scope of This Document / 文件範圍
+
+### English
+This document records the **v1.0 functional requirements** discussed during the initial project meeting.
+
+Its purposes are to:
+- Define MVP scope
+- Align engineering and design work
+- Separate detailed requirements from the README
+- Serve as a baseline for future iterations
+
+This document is **internal and evolving**, not a final contract.
+
+---
+
+### 中文（繁體）
+本文件記錄於首次專案會議中討論的 **v1.0 功能需求**。
+
+文件目的包括：
+- 定義最小可行產品（MVP）範圍
+- 對齊工程與設計方向
+- 將詳細需求與 README 分離
+- 作為未來版本演進的基礎
+
+本文件屬於 **內部草案**，並非最終規格。
+
+---
+
+## 2. Job Posting Model / 工作發布模型
+
+### 2.1 Required Fields / 必要欄位
+
+| Field (EN) | 欄位（中文） | Description |
+|-----------|-------------|-------------|
+| Job Title / Role | 工作職位 | 例如：侍應、宴會助理 |
+| Hotel / Client Name | 酒店／客戶名稱 | 可使用真實或遮蔽名稱 |
+| Date | 日期 | 工作日期 |
+| Start Time | 開始時間 | 班次開始 |
+| End Time | 結束時間 | 班次結束 |
+| Pay Rate | 薪酬 | 時薪或固定金額 |
+| Pay Method | 付款方式 | 現金／FPS／轉帳／其他 |
+| Slots Needed | 所需人數 | 工作名額 |
+| Cutoff Time | 截止時間 | 最後報名時間 |
+
+---
+
+### 2.2 Optional Fields / 選填欄位
+
+| Field (EN) | 欄位（中文） | Description |
+|-----------|-------------|-------------|
+| Meeting Point | 集合地點 | 詳細位置 |
+| Dress Code | 服裝要求 | 制服／顏色 |
+| Language Requirement | 語言要求 | 廣東話／英語等 |
+| Notes | 備註 | 自由輸入 |
+
+---
+
+## 3. Capacity & 418 / 468 Handling  
+名額限制與 418 / 468 處理
+
+### English
+- System enforces **hard capacity limits**
+- Workers **cannot join** if the limit would be exceeded
+- Limit is configurable
+
+Ownership of limit control is **not finalized**.
+
+---
+
+### 中文（繁體）
+- 系統實施 **硬性人數限制**
+- 若超出限制，工人 **不可報名**
+- 人數限制可設定
+
+人數限制由誰設定（協調員／酒店）**尚未確定**。
+
+---
+
+## 4. Signup & Reservation Model  
+報名與預留名額機制
+
+### 4.1 Signup Behavior / 報名行為
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Instant reservation on signup | 報名即時預留名額 |
+| Reservation is tentative | 名額於鎖定前屬暫定 |
+
+---
+
+### 4.2 Lock Time / 鎖定時間
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Lock time set by coordinator | 鎖定時間由協調員設定 |
+| Roster editable before lock | 鎖定前可調整名單 |
+| Roster fixed after lock | 鎖定後名單固定 |
+
+---
+
+### 4.3 Removal Rules / 移除規則
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Worker may be removed | 工人可被移除 |
+| Reason is required | 必須提供原因 |
+| Notification sent | 系統發送通知 |
+
+---
+
+### 4.4 Cancellation Policy / 取消政策
+
+Status:
+- **Not finalized in v1.0**
+- Defined by coordinator
+- Time window TBD
+
+狀態：
+- **v1.0 尚未定案**
+- 由協調員設定
+- 時間窗口待定
+
+---
+
+## 5. Coordinator Roster Tools  
+協調員名單管理工具
+
+### 5.1 Mandatory Features / 必要功能
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Add worker manually | 手動加入工人 |
+| Remove worker | 移除工人 |
+| Replace A with B | 單一步驟替換 |
+| Job-specific tags | 工作專屬標籤 |
+
+標籤示例：
+- VIP
+- 制服合格
+- 語言合格
+
+---
+
+### 5.2 Not in v1.0 / v1.0 不包含
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Export roster | 匯出名單 |
+| Share with hotel | 對外分享 |
+
+---
+
+## 6. Standby List / 候補名單
+
+Status: **Unclear / TBD**
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Possible future feature | 未來可能功能 |
+| Not in MVP | 不屬於 MVP |
+| Needs discussion | 需進一步討論 |
+
+---
+
+## 7. Attendance & Outcome Tracking  
+出勤與結果紀錄
+
+### 7.1 Authority / 設定權限
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Coordinator only | 僅限協調員 |
+
+---
+
+### 7.2 Supported Outcomes / 支援結果
+
+| Outcome (EN) | 結果（中文） | Notes |
+|-------------|-------------|-------|
+| Completed | 正常完成 | |
+| Late | 遲到 | 分鐘數待定 |
+| No Show | 缺席 | |
+| Left Early | 早退 | |
+| Bad Performance | 表現欠佳 | 可附註 |
+| Approved Substitution | 獲批代替 | |
+
+---
+
+### 7.3 Penalty Effects / 懲罰影響
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Record only in v1.0 | v1.0 僅作紀錄 |
+| No automatic punishment | 無自動懲罰 |
+| May affect future priority | 未來可能影響優先權 |
+
+---
+
+## 8. Notifications / 通知系統
+
+### Candidate Notifications / 可能通知類型
+
+| English | 中文（繁體） |
+|-------|-------------|
+| New job broadcast | 新工作通知 |
+| Join success | 成功報名 |
+| Slot full | 名額已滿 |
+| Removed from job | 被移除 |
+| Reminder (24h) | 24 小時提醒 |
+| Reminder (2h) | 2 小時提醒 |
+| Outcome recorded | 結果已紀錄 |
+| Warning issued | 發出警告 |
+
+---
+
+## 9. Fairness & Allocation Philosophy  
+公平性與分配原則
+
+### English
+- Allocation model: **Mixed**
+- Factors may include:
+  - Performance history
+  - Attendance record
+  - Coordinator discretion
+
+Exact algorithm **not defined in v1.0**.
+
+---
+
+### 中文（繁體）
+- 分配模式：**混合制**
+- 可能因素：
+  - 過往表現
+  - 出勤紀錄
+  - 協調員判斷
+
+具體演算法 **v1.0 尚未定義**。
+
+---
+
+## 10. Explicit Non-Goals / 明確非目標（v1.0）
+
+| English | 中文（繁體） |
+|-------|-------------|
+| Hotel self-service portal | 酒店自助平台 |
+| Video uploads | 影片上傳 |
+| Automated skill verification | 自動技能驗證 |
+| Advanced matching algorithms | 高階配對演算法 |
+| Full iOS/Web parity | iOS／Web 完整同步 |
+
+---
+
+## 11. Revision Info / 修訂資訊
+
+| Field | Value |
+|-----|------|
+| Version | v1.0 |
+| Status | Draft / Internal |
+| Source | Initial team meeting |
+
